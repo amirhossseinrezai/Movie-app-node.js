@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Movie Project</title>
+    <link rel="stylesheet" href="../public/css/bootstrap-v4.css">
+    <script src="../public/js/jquery.js"></script>
+    <script src="../public/js/bootstrap-v4.js"></script>
+    <link rel="stylesheet" href="../public/stylesheets/design.css">
+    <link rel="stylesheet" href="../public/css/all.css">
+    <script src="../public/js/all.js"></script>
+</head>
+
+<body>
+    <h1 id="searchheading">Search Result &nbsp;<i class="fas fa-caret-right"></i>&nbsp;Avengers</h1>
+    <% data['results'].forEach((movie)=>{%>
+        <div class="card w-75 mb-2">
+            <div class="row no-guuters">
+                <div class="col-md-4">
+                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2<%=movie['poster_path']%>" class="card-img img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title"><%= movie['original_title']%></h2>
+                        <hr>
+                        <p class="card-text">
+                            <%= movie['overview']%>
+                        </p>
+                        <hr>
+                        <p class="card-text">
+                            <b>Date Published :</b> <%= movie['release_date']%>
+                        </p>
+                        <p class="card-text">
+                            <b>Total Votes :</b> <%= movie['vote_count']%>
+                        </p>
+                        <p class="card-text">
+                            <b>Average Rating :</b> <%= movie['vote_average']%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%})%>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+h1{
+    font-family: sans-serif;
+    margin-left: 12.5%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+body{
+    background-color: #eaeaea;
+}
+.card {
+    background-color: white;
+    margin-left: 12.5%;
+}
+.card-img {
+    height: 24rem;
+}
